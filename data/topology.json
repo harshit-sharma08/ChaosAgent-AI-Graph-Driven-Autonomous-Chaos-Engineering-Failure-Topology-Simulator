@@ -1,0 +1,42 @@
+{
+    "nodes": [
+        {
+            "id": "Frontend",
+            "type": "frontend",
+            "criticality": 5
+        },
+        {
+            "id": "API Gateway",
+            "type": "gateway",
+            "criticality": 5
+        },
+        {
+            "id": "Auth Service",
+            "type": "service",
+            "criticality": 4
+        },
+        {
+            "id": "Payment Service",
+            "type": "service",
+            "criticality": 5
+        },
+        {
+            "id": "Order Service",
+            "type": "service",
+            "criticality": 4
+        },
+        {
+            "id": "Database",
+            "type": "database",
+            "criticality": 5
+        }
+    ],
+    "edges": [
+        ["Frontend", "API Gateway"],
+        ["API Gateway", "Auth Service"],
+        ["API Gateway", "Payment Service"],
+        ["API Gateway", "Order Service"],
+        ["Payment Service", "Database"],
+        ["Order Service", "Database"]
+    ]
+}
