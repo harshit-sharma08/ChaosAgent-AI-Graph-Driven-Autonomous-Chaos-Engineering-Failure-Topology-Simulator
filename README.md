@@ -144,3 +144,130 @@ chaosagent-ai/
 * Required AI/LLM API credentials if an external LLM provider is configured
 * Node.js only if the project repository contains a separate web dashboard/frontend
 
+* ### 6.1 Clone & Install
+
+[svg](YOUR_GITHUB_README_LINK#61-clone--install)
+
+```text
+# Clone the repository
+git clone YOUR_GITHUB_REPOSITORY_URL
+cd chaosagent-ai
+
+# Install project dependencies
+# Follow the dependency instructions provided by the individual
+# services/modules in the repository.
+
+# Configure the required environment variables
+# Copy the example environment file if provided:
+cp .env.example .env
+```
+
+**svg**
+
+> **Note:** ChaosAgent AI depends on infrastructure and observability components such as Kubernetes, telemetry sources, and the configured AI/experiment environment. Make sure the required dependencies are available before running chaos experiments.
+
+### 6.2 Environment Variables
+
+[svg](YOUR_GITHUB_README_LINK#62-environment-variables)
+
+**`.env`**
+
+```text
+# AI / LLM configuration
+LLM_PROVIDER=mock
+LLM_API_KEY=
+
+# Kubernetes configuration
+KUBERNETES_NAMESPACE=default
+
+# Observability configuration
+OTEL_ENDPOINT=
+EBPF_ENABLED=false
+
+# Chaos experiment configuration
+EXPERIMENT_MODE=staging
+EXPERIMENT_TIMEOUT=
+MAX_BLAST_RADIUS=
+
+# Safety configuration
+ENABLE_GUARDRAILS=true
+ENABLE_ROLLBACK=true
+```
+
+**svg**
+
+> **Note:** The exact environment variables depend on the modules and integrations enabled in the current implementation. Do not add production credentials or unrestricted infrastructure access to local development configuration.
+
+**Never commit real API keys or credentials.** Keep secrets only in local `.env` files or the project's configured secret-management system.
+
+## 7. Running Locally
+
+[svg](YOUR_GITHUB_README_LINK#7-running-locally)
+
+Start the required infrastructure and application components according to the repository configuration.
+
+```text
+# Start the required development environment
+# Example:
+
+docker compose up
+
+# or start the required services individually
+# according to the project configuration.
+```
+
+**svg**
+
+If Kubernetes is required for the current experiment, start a local Kubernetes environment such as Minikube or another supported cluster before running the experiment.
+
+```text
+# Verify Kubernetes connectivity
+kubectl get nodes
+
+# Verify the required workloads
+kubectl get pods
+```
+
+**svg**
+
+> **Important:** Run chaos experiments only against the intended development, staging, or isolated test environment. Do not point experimental fault injection at production infrastructure without appropriate authorization and safety controls.
+
+## 8. Demo Workflow
+
+[svg](YOUR_GITHUB_README_LINK#8-demo-workflow)
+
+1. Start the required ChaosAgent AI services and supporting infrastructure.
+2. Provide the system with service, telemetry, and configuration information.
+3. Build or load the dependency graph representing the relationships between services.
+4. Review the generated topology to understand service dependencies.
+5. Let the AI analysis layer identify potential failure scenarios.
+6. Select a controlled experiment for the configured test environment.
+7. Analyze the expected blast radius before executing the experiment.
+8. Run the selected chaos experiment within the configured safety boundaries.
+9. Observe the affected services and system behavior through telemetry and monitoring data.
+10. Review the resulting failure propagation and resilience insights.
+11. Use the identified weak points to improve mechanisms such as circuit breakers, rate limiting, fallback handling, or service dependencies.
+
+## 9. API Documentation
+
+[svg](YOUR_GITHUB_README_LINK#9-api-documentation)
+
+### Core System Interfaces
+
+[svg](YOUR_GITHUB_README_LINK#core-system-interfaces)
+
+The exact API routes depend on the backend implementation present in the repository. The main logical operations exposed by ChaosAgent AI are:
+
+| **Operation**            | **Description**                               |
+| ------------------------ | --------------------------------------------- |
+| Dependency Graph         | Build or update the service dependency graph  |
+| Telemetry Ingestion      | Collect service and observability information |
+| Graph Analysis           | Analyze relationships between services        |
+| Failure Planning         | Identify potential failure scenarios          |
+| Blast-Radius Analysis    | Estimate affected downstream services         |
+| Experiment Configuration | Configure a controlled chaos experiment       |
+| Experiment Execution     | Execute the selected failure scenario         |
+| Experiment Status        | Monitor the running experiment                |
+| Experimen                |                                               |
+
+
