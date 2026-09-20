@@ -47,3 +47,100 @@ ChaosAgent AI collects system and service information from sources such as Kuber
 * **Experiment configuration** — supports configuration-driven chaos scenarios so that failure parameters and experiment boundaries can be defined before execution.
 
 * **Staging / canary experimentation** — designed to perform controlled experiments in isolated or limited environments before considering broader system testing.
+
+* ## 3. Architecture
+
+[svg](YOUR_GITHUB_README_LINK#3-architecture)
+
+```text
+Kubernetes / OpenTelemetry / eBPF / Config
+                 |
+                 v
+        Telemetry & Data Layer
+                 |
+                 v
+       Dependency Graph Engine
+                 |
+                 v
+          AI Agent Layer
+        ├── Graph Analysis
+        ├── Failure Scenario Planning
+        ├── Blast-Radius Analysis
+        └── Experiment Selection
+                 |
+                 v
+       Chaos Experiment Engine
+        ├── Latency Injection
+        ├── Pod / Service Failure
+        └── DB Connection Pool Exhaustion
+                 |
+                 v
+       Safety & Guardrail Layer
+        ├── Experiment Limits
+        ├── Scope Control
+        └── Rollback / Stop
+                 |
+                 v
+        Resilience Insights
+        ├── Failure Impact
+        ├── Affected Services
+        └── Resilience Recommendations
+```
+
+**svg**
+
+ChaosAgent AI follows a graph-driven chaos engineering architecture. The system collects service and observability information from sources such as Kubernetes, OpenTelemetry traces, eBPF-based metrics, and configured system data. This information is used to build a dependency graph representing relationships between services. The AI agent analyzes the graph to identify potential failure scenarios and estimate their possible blast radius. Selected experiments are then executed in a controlled environment through the chaos experiment layer, while safety guardrails limit the experiment scope and provide mechanisms to stop or roll back unsafe experiments. Finally, the collected results are analyzed to identify failure propagation, weak dependencies, and opportunities to improve system resilience.
+
+## 4. Tech Stack
+
+[svg](YOUR_GITHUB_README_LINK#4-tech-stack)
+
+| **Layer**         | **Technologies**                                                      |
+| ----------------- | --------------------------------------------------------------------- |
+| Infrastructure    | Kubernetes, Containers                                                |
+| Observability     | OpenTelemetry, eBPF                                                   |
+| Graph / Topology  | Dependency Graph, Graph-based Analysis                                |
+| AI / Intelligence | LLM-based AI Agent, Graph Analysis                                    |
+| Chaos Engineering | Fault Injection, Controlled Experiments                               |
+| Experiment Types  | Latency Injection, Pod/Service Failure, DB Connection Pool Exhaustion |
+| Configuration     | YAML / Configuration Files                                            |
+| Insights          | Failure Analysis, Blast-Radius Analysis, Resilience Metrics           |
+
+## 5. Project Structure
+
+[svg](YOUR_GITHUB_README_LINK#5-project-structure)
+
+```text
+chaosagent-ai/
+├── config/                 Configuration files
+├── graph/                  Dependency graph and topology logic
+├── agent/                  AI agent and experiment planning
+├── experiments/            Chaos experiment definitions
+├── telemetry/              Observability and telemetry integration
+├── guardrails/             Experiment safety and control logic
+├── analysis/               Failure and blast-radius analysis
+├── insights/               Resilience insights and recommendations
+└── README.md               Project documentation
+```
+
+**svg**
+
+> **Note:** The exact folder structure may vary depending on the current implementation in the repository. The structure above represents the logical architecture of the ChaosAgent AI project.
+
+## 6. Installation
+
+[svg](YOUR_GITHUB_README_LINK#6-installation)
+
+### Prerequisites
+
+[svg](YOUR_GITHUB_README_LINK#prerequisites)
+
+* Python 3.10+
+* Docker
+* Kubernetes / Minikube or another Kubernetes environment
+* Git
+* OpenTelemetry-compatible telemetry source
+* eBPF-compatible Linux environment for eBPF-based monitoring
+* Required AI/LLM API credentials if an external LLM provider is configured
+* Node.js only if the project repository contains a separate web dashboard/frontend
+
