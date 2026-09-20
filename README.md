@@ -246,26 +246,86 @@ kubectl get pods
 10. Review the resulting failure propagation and resilience insights.
 11. Use the identified weak points to improve mechanisms such as circuit breakers, rate limiting, fallback handling, or service dependencies.
 
-## 9. API Documentation
+9. API Documentation
 
 
 
-### Core System Interfaces
+Core System Interfaces
 
 
 
 The exact API routes depend on the backend implementation present in the repository. The main logical operations exposed by ChaosAgent AI are:
 
-| **Operation**            | **Description**                               |
-| ------------------------ | --------------------------------------------- |
-| Dependency Graph         | Build or update the service dependency graph  |
-| Telemetry Ingestion      | Collect service and observability information |
-| Graph Analysis           | Analyze relationships between services        |
-| Failure Planning         | Identify potential failure scenarios          |
-| Blast-Radius Analysis    | Estimate affected downstream services         |
-| Experiment Configuration | Configure a controlled chaos experiment       |
-| Experiment Execution     | Execute the selected failure scenario         |
-| Experiment Status        | Monitor the running experiment                |
-| Experimen                |                                               |
+Operation	Description
+Dependency Graph	Build or update the service dependency graph
+Telemetry Ingestion	Collect service and observability information
+Graph Analysis	Analyze relationships between services
+Failure Planning	Identify potential failure scenarios
+Blast-Radius Analysis	Estimate affected downstream services
+Experiment Configuration	Configure a controlled chaos experiment
+Experiment Execution	Execute the selected failure scenario
+Experiment Status	Monitor the running experiment
+Experiment Stop / Rollback	Stop or roll back an unsafe experiment
+Resilience Analysis	Analyze system behavior after the experiment
+Insights	Return failure impact and resilience recommendations
 
 
+
+Note: Add the exact GET/POST/PUT/DELETE routes from the current backend implementation here once the repository API is finalized. This avoids documenting endpoints that are not actually present in the project.
+
+10. System / Data Model
+
+
+
+The core data handled by ChaosAgent AI can be represented through the following logical components:
+
+Service
+   |
+   ├── Service Dependency
+   |
+   ├── Telemetry / Metric
+   |
+   ├── Failure Scenario
+   |
+   ├── Experiment
+   |
+   ├── Blast-Radius Result
+   |
+   └── Resilience Insight
+
+svg
+
+The dependency graph represents services as nodes and their relationships as edges. Telemetry provides additional information about service behavior, while experiment records describe the failure scenario, scope, execution state, and observed impact. Blast-radius analysis connects the failure scenario to the services that may be affected.
+
+Note: The exact storage technology and schema should be updated here according to the database or graph-storage implementation currently present in the repository.
+
+11. Project Limitations
+
+svg
+
+The project is an educational prototype and should not be treated as a production-ready autonomous chaos engineering platform.
+The quality of dependency analysis depends on the telemetry, Kubernetes information, and service configuration available to the system.
+Blast-radius analysis is dependent on the accuracy and completeness of the generated dependency graph.
+AI-generated experiment recommendations should be reviewed before execution.
+Chaos experiments should be restricted to controlled development, staging, or isolated environments.
+Advanced autonomous experiment selection and predictive capabilities may require additional implementation and validation.
+eBPF-based monitoring depends on a compatible Linux environment and the required kernel capabilities.
+External LLM providers may require API credentials and can introduce external service dependencies.
+The system should not be given unrestricted production access merely to perform an experiment.
+12. Future Improvements
+
+svg
+
+More accurate predictive blast-radius analysis using historical telemetry and failure data.
+Advanced graph-based failure propagation and dependency analysis.
+Reinforcement-learning-based experiment selection.
+Multi-cluster and multi-cloud dependency graph support.
+Deeper OpenTelemetry and eBPF integrations.
+More chaos experiment types and configurable experiment templates.
+Advanced guardrails with automatic experiment termination and rollback.
+CI/CD integration for automated resilience testing.
+Resilience scorecards and historical MTTR tracking.
+Automated remediation recommendations based on observed failure patterns.
+Gradual expansion toward autonomous chaos experiment planning and resilience validation.
+
+Built as an educational Chaos Engineering and AI project.
