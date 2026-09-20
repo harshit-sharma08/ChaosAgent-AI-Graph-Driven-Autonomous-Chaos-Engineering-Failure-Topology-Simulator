@@ -8,7 +8,7 @@
 
 ## 1. Project Overview
 
-[svg](YOUR_GITHUB_README_LINK#1-project-overview)
+
 
 ChaosAgent AI demonstrates how AI-assisted chaos engineering can help engineering teams understand service dependencies, identify potential failure scenarios, analyze blast radius, and safely test system resilience before failures become major incidents. The core workflow:
 
@@ -22,7 +22,7 @@ ChaosAgent AI collects system and service information from sources such as Kuber
 
 ## 2. Features
 
-[svg](YOUR_GITHUB_README_LINK#2-features)
+
 
 * **Dependency graph generation** — service and system information is used to build a dependency graph that represents how different services communicate and depend on each other.
 
@@ -50,7 +50,7 @@ ChaosAgent AI collects system and service information from sources such as Kuber
 
 * ## 3. Architecture
 
-[svg](YOUR_GITHUB_README_LINK#3-architecture)
+
 
 ```text
 Kubernetes / OpenTelemetry / eBPF / Config
@@ -87,13 +87,13 @@ Kubernetes / OpenTelemetry / eBPF / Config
         └── Resilience Recommendations
 ```
 
-**svg**
+
 
 ChaosAgent AI follows a graph-driven chaos engineering architecture. The system collects service and observability information from sources such as Kubernetes, OpenTelemetry traces, eBPF-based metrics, and configured system data. This information is used to build a dependency graph representing relationships between services. The AI agent analyzes the graph to identify potential failure scenarios and estimate their possible blast radius. Selected experiments are then executed in a controlled environment through the chaos experiment layer, while safety guardrails limit the experiment scope and provide mechanisms to stop or roll back unsafe experiments. Finally, the collected results are analyzed to identify failure propagation, weak dependencies, and opportunities to improve system resilience.
 
 ## 4. Tech Stack
 
-[svg](YOUR_GITHUB_README_LINK#4-tech-stack)
+
 
 | **Layer**         | **Technologies**                                                      |
 | ----------------- | --------------------------------------------------------------------- |
@@ -108,7 +108,7 @@ ChaosAgent AI follows a graph-driven chaos engineering architecture. The system 
 
 ## 5. Project Structure
 
-[svg](YOUR_GITHUB_README_LINK#5-project-structure)
+
 
 ```text
 chaosagent-ai/
@@ -129,11 +129,10 @@ chaosagent-ai/
 
 ## 6. Installation
 
-[svg](YOUR_GITHUB_README_LINK#6-installation)
 
 ### Prerequisites
 
-[svg](YOUR_GITHUB_README_LINK#prerequisites)
+
 
 * Python 3.10+
 * Docker
@@ -146,7 +145,7 @@ chaosagent-ai/
 
 * ### 6.1 Clone & Install
 
-[svg](YOUR_GITHUB_README_LINK#61-clone--install)
+
 
 ```text
 # Clone the repository
@@ -168,7 +167,7 @@ cp .env.example .env
 
 ### 6.2 Environment Variables
 
-[svg](YOUR_GITHUB_README_LINK#62-environment-variables)
+
 
 **`.env`**
 
@@ -202,7 +201,7 @@ ENABLE_ROLLBACK=true
 
 ## 7. Running Locally
 
-[svg](YOUR_GITHUB_README_LINK#7-running-locally)
+
 
 Start the required infrastructure and application components according to the repository configuration.
 
@@ -234,7 +233,6 @@ kubectl get pods
 
 ## 8. Demo Workflow
 
-[svg](YOUR_GITHUB_README_LINK#8-demo-workflow)
 
 1. Start the required ChaosAgent AI services and supporting infrastructure.
 2. Provide the system with service, telemetry, and configuration information.
@@ -250,11 +248,11 @@ kubectl get pods
 
 ## 9. API Documentation
 
-[svg](YOUR_GITHUB_README_LINK#9-api-documentation)
+
 
 ### Core System Interfaces
 
-[svg](YOUR_GITHUB_README_LINK#core-system-interfaces)
+
 
 The exact API routes depend on the backend implementation present in the repository. The main logical operations exposed by ChaosAgent AI are:
 
