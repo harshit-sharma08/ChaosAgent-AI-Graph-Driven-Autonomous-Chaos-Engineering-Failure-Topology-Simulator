@@ -21,7 +21,7 @@ def select_failure_type():
 def inject_failure(graph, failed_node=None):
 
     if failed_node is None:
-        failed_node = select_random_node()
+        failed_node = select_random_node(graph)
 
     if failed_node not in graph.nodes:
         raise ValueError("Service not found in topology")
