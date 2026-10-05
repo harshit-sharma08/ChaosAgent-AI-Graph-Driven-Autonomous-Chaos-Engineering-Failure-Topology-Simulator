@@ -20,3 +20,29 @@ def test_impact_analysis():
     assert "storage" in result["affected_services"]
 
     assert result["impact_count"] == 3
+    assert result["impact_level"] == "HIGH"
+
+
+def test_low_impact():
+
+    graph = nx.DiGraph()
+
+    graph.add_node("payment")
+
+    result = analyze_impact(graph, "payment")
+
+    assert result["impact_count"] == 0
+    assert result["impact_level"] == "LOW"
+
+
+def test_missing_service():
+
+    graph = nx.DiGraph()
+
+    graph.add_node("payment")
+
+    result = analyze_impact(graph, "database")
+
+    assert result["failed_service"] == "database"
+    assert result["impact_count"] == 0
+    assert result["impact_level"] == "LOW"
