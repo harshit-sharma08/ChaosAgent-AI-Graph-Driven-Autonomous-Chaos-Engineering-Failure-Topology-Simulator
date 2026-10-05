@@ -1,0 +1,57 @@
+scenario_id,arm,fault_category,ttr_seconds,recovered,vulnerability_detected,is_simulated,notes,api_cost_usd,cycles_used,wall_clock_seconds,repetition,timestamp
+pod_termination-01,proposed,pod_termination,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.302605+00:00
+pod_termination-01,rule_based,pod_termination,495.1993313200498,True,False,True,illustrative only -- replace with real Chaos Mesh timing,,,,1,2026-08-31T09:13:59.303473+00:00
+pod_termination-02,proposed,pod_termination,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.323599+00:00
+pod_termination-02,rule_based,pod_termination,620.9763260096097,True,False,True,illustrative only -- replace with real Chaos Mesh timing,,,,1,2026-08-31T09:13:59.324428+00:00
+pod_termination-03,proposed,pod_termination,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.343705+00:00
+pod_termination-03,rule_based,pod_termination,510.88812492794347,True,False,True,illustrative only -- replace with real Chaos Mesh timing,,,,1,2026-08-31T09:13:59.344571+00:00
+pod_termination-04,proposed,pod_termination,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.363931+00:00
+pod_termination-04,rule_based,pod_termination,449.10657407005436,True,False,True,illustrative only -- replace with real Chaos Mesh timing,,,,1,2026-08-31T09:13:59.364735+00:00
+network_latency-01,proposed,network_latency,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.385873+00:00
+network_latency-01,rule_based,network_latency,1771.993278008794,True,False,True,illustrative only -- replace with real Chaos Mesh timing,,,,1,2026-08-31T09:13:59.386752+00:00
+network_latency-02,proposed,network_latency,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.406666+00:00
+network_latency-02,rule_based,network_latency,1617.8968953490094,True,False,True,illustrative only -- replace with real Chaos Mesh timing,,,,1,2026-08-31T09:13:59.407592+00:00
+network_latency-03,proposed,network_latency,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.426929+00:00
+network_latency-03,rule_based,network_latency,1678.2836121930568,True,False,True,illustrative only -- replace with real Chaos Mesh timing,,,,1,2026-08-31T09:13:59.427671+00:00
+network_latency-04,proposed,network_latency,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.450544+00:00
+network_latency-04,rule_based,network_latency,1606.8803761148097,True,False,True,illustrative only -- replace with real Chaos Mesh timing,,,,1,2026-08-31T09:13:59.451722+00:00
+resource_exhaustion-01,proposed,resource_exhaustion,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.471533+00:00
+resource_exhaustion-01,rule_based,resource_exhaustion,1817.3326154044482,True,False,True,illustrative only -- replace with real Chaos Mesh timing,,,,1,2026-08-31T09:13:59.472426+00:00
+resource_exhaustion-02,proposed,resource_exhaustion,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.491866+00:00
+resource_exhaustion-02,rule_based,resource_exhaustion,1808.0004400131147,True,False,True,illustrative only -- replace with real Chaos Mesh timing,,,,1,2026-08-31T09:13:59.492811+00:00
+resource_exhaustion-03,proposed,resource_exhaustion,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.511839+00:00
+resource_exhaustion-03,rule_based,resource_exhaustion,1784.0755192847314,True,False,True,illustrative only -- replace with real Chaos Mesh timing,,,,1,2026-08-31T09:13:59.512692+00:00
+resource_exhaustion-04,proposed,resource_exhaustion,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.535811+00:00
+resource_exhaustion-04,rule_based,resource_exhaustion,1889.9575913946533,True,False,True,illustrative only -- replace with real Chaos Mesh timing,,,,1,2026-08-31T09:13:59.536876+00:00
+packet_loss-01,proposed,packet_loss,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.556396+00:00
+packet_loss-01,rule_based,packet_loss,1154.6915720186348,True,False,True,illustrative only -- replace with real Chaos Mesh timing,,,,1,2026-08-31T09:13:59.557314+00:00
+packet_loss-02,proposed,packet_loss,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.578077+00:00
+packet_loss-02,rule_based,packet_loss,1302.7179758106417,True,False,True,illustrative only -- replace with real Chaos Mesh timing,,,,1,2026-08-31T09:13:59.579031+00:00
+packet_loss-03,proposed,packet_loss,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.599332+00:00
+packet_loss-03,rule_based,packet_loss,1249.5776964598017,True,False,True,illustrative only -- replace with real Chaos Mesh timing,,,,1,2026-08-31T09:13:59.601171+00:00
+packet_loss-04,proposed,packet_loss,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.620962+00:00
+packet_loss-04,rule_based,packet_loss,1267.9932780087943,True,False,True,illustrative only -- replace with real Chaos Mesh timing,,,,1,2026-08-31T09:13:59.622053+00:00
+configuration_drift-01,proposed,configuration_drift,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.641657+00:00
+configuration_drift-01,rule_based,configuration_drift,,False,False,True,unsupported by rule-based tool (simulated),,,,1,2026-08-31T09:13:59.642591+00:00
+configuration_drift-02,proposed,configuration_drift,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.662589+00:00
+configuration_drift-02,rule_based,configuration_drift,,False,False,True,unsupported by rule-based tool (simulated),,,,1,2026-08-31T09:13:59.663562+00:00
+configuration_drift-03,proposed,configuration_drift,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.685028+00:00
+configuration_drift-03,rule_based,configuration_drift,,False,False,True,unsupported by rule-based tool (simulated),,,,1,2026-08-31T09:13:59.686081+00:00
+configuration_drift-04,proposed,configuration_drift,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.707645+00:00
+configuration_drift-04,rule_based,configuration_drift,,False,False,True,unsupported by rule-based tool (simulated),,,,1,2026-08-31T09:13:59.708788+00:00
+emergent-01,proposed,emergent,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.728390+00:00
+emergent-01,rule_based,emergent,1578.5209356821554,True,False,True,illustrative only -- replace with real Chaos Mesh timing,,,,1,2026-08-31T09:13:59.729423+00:00
+emergent-02,proposed,emergent,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.749639+00:00
+emergent-02,rule_based,emergent,1438.7401475559845,True,False,True,illustrative only -- replace with real Chaos Mesh timing,,,,1,2026-08-31T09:13:59.751367+00:00
+emergent-03,proposed,emergent,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.771242+00:00
+emergent-03,rule_based,emergent,1597.4909624926488,True,False,True,illustrative only -- replace with real Chaos Mesh timing,,,,1,2026-08-31T09:13:59.772327+00:00
+emergent-04,proposed,emergent,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.791789+00:00
+emergent-04,rule_based,emergent,1576.9060908517486,True,False,True,illustrative only -- replace with real Chaos Mesh timing,,,,1,2026-08-31T09:13:59.792865+00:00
+emergent-05,proposed,emergent,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.812379+00:00
+emergent-05,rule_based,emergent,1382.0754809597445,True,False,True,illustrative only -- replace with real Chaos Mesh timing,,,,1,2026-08-31T09:13:59.813458+00:00
+emergent-06,proposed,emergent,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.835482+00:00
+emergent-06,rule_based,emergent,1619.6104476321323,True,False,True,illustrative only -- replace with real Chaos Mesh timing,,,,1,2026-08-31T09:13:59.836658+00:00
+emergent-07,proposed,emergent,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.857157+00:00
+emergent-07,rule_based,emergent,1600.2494488109364,True,False,True,illustrative only -- replace with real Chaos Mesh timing,,,,1,2026-08-31T09:13:59.858409+00:00
+emergent-08,proposed,emergent,30,True,True,True,simulated wall-clock 0.01s,,5,0.01,1,2026-08-31T09:13:59.878507+00:00
+emergent-08,rule_based,emergent,1529.406222394091,True,False,True,illustrative only -- replace with real Chaos Mesh timing,,,,1,2026-08-31T09:13:59.879786+00:00
