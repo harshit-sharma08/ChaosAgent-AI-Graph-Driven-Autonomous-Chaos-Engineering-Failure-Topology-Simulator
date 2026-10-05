@@ -1,11 +1,10 @@
 from flask import Flask, jsonify
-from flask_cors import CORS
-
-from backend.graph_engine import get_topology
-
+from backend.impact_api import impact_api
 
 app = Flask(__name__)
-CORS(app)
+
+# Impact Analysis API
+app.register_blueprint(impact_api)
 
 
 @app.route("/")
@@ -15,9 +14,11 @@ def home():
     })
 
 
-@app.route("/topology")
-def topology():
-    return jsonify(get_topology())
+@app.route("/health")
+def health():
+    return jsonify({
+        "status": "healthy"
+    })
 
 
 if __name__ == "__main__":
