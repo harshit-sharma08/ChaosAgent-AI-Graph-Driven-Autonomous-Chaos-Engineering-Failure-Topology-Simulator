@@ -1,0 +1,1 @@
+scenario_id,arm,fault_category,ttr_seconds,recovered,vulnerability_detected,is_simulated,cycles_used,api_cost_usd,wall_clock_seconds,repetition,timestamp
